@@ -11,7 +11,6 @@ const TakeSurvey = (props) => {
     }
 
     const questions = props.questions;
-    console.log(questions);
 
     return (
         <div>
@@ -32,10 +31,12 @@ const TakeSurvey = (props) => {
                                                             {ques.question['answers'][key]}
                                                         </label>
                                                     ) : (
-                                                        <label className="form-check-label">
-                                                            <input type="radio" className="form-check-input" name="optradio" />
-                                                            {ques.question['answers'][key]}
-                                                        </label>
+                                                        <div>
+                                                            <label className="form-check-label">
+                                                                <input type="radio" className="form-check-input" name="optradio" />
+                                                                {ques.question['answers'][key]}
+                                                            </label>
+                                                        </div>
                                                     )}
                                                 </div>
                                             ))}
